@@ -1,0 +1,698 @@
+/* 
+Project Name: Personal Website;
+Author: Basil Vetas
+*/
+
+
+/*----------------------------------------------------------------------------- 
+01=BASE   
+-----------------------------------------------------------------------------*/
+
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Document level font adjustments */
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  html { 
+    font-size: 8px; 
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  html { 
+    font-size: 6px; 
+    height: 100%;
+  }
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+
+  /* Full Page Background Receipe */
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 
+  The wrapper id makes sure the footer
+  stays at the bottom of the page.
+*/
+#wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -5rem; 
+}
+
+#wrapper:after {
+  content: "";
+  display: block;
+  /* equal to footer height */
+  height: -5rem;
+}
+
+nav {
+  background: rgba(241, 240, 237, .9); /* #F1F0ED; */
+  padding-right: 5em;
+  padding-left: 5em;
+  border-bottom: .1em solid #DDDDDD;
+  font-size: 1rem;
+  letter-spacing: .1em;
+}
+
+
+header {
+  font-size: 1rem;
+  padding-top: 5rem;
+}
+
+
+#main {
+  font-size: 1rem;
+  float: left;
+  width: 100%;
+}
+
+footer {
+  height: 5rem;
+  background: #F1F0ED;
+  float: left;
+  padding: 2rem 5rem;
+  border-top: .1rem solid #DDDDDD;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.left-col {
+  float: left;
+  padding-right: 2rem;
+  width: 70%;
+  max-width: 70%;
+}
+
+.right-col {
+  /*background: #EFEEEA;*/
+  float: left;
+  width: 30%; 
+  max-width: 30%;
+  margin-top: 4em;
+}
+
+/*----------------------------------------------------------------------------- 
+02=NAV  
+-----------------------------------------------------------------------------*/
+
+nav ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.social {
+  margin: .6em .1em .4em .1em;
+  padding: .3em .1em;
+}
+
+.social-media {
+
+}
+
+.last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+}
+
+nav ul li a {
+  margin: .8em 1.5em .1em 0;
+  padding: .5em 1.5em .1em 0;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+
+    /*  ----- Mobile Nav Menu -----  */
+
+    #nav-title {
+      float: left;
+      text-align: center;
+    }
+
+    #menu {
+      /*width: 1em;*/
+      /*display: block;*/
+      color: #6D6D6D;
+      border: .08em solid #6D6D6D;
+      font-size: 3em;
+      float: left;
+      margin: .3em 1em .1em 0;
+      padding: .2em .1em 0 .2em;
+      border-radius: .3em;
+    }
+
+    #menu a {
+      vertical-align: top;
+    }
+
+    #menu a:hover {
+      color: #000000;
+      -webkit-transition: color .3s ease-in;  /* Safari and Chrome */
+      -moz-transition: color .3s ease-in;     /* Firefox 4 */
+      -ms-transition: color 0.3s ease-in;     /* Internet Explorer */
+      -o-transition: color .3s ease-in;       /* Opera */
+      transition: color .3s ease-in;  
+    }
+
+    #nav.hide {
+      display: none;
+    }
+
+    li {
+      width: 100%;
+    }
+
+    .last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    
+    /*  ----- Nav Menu -----  */
+    #menu {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+
+    #social-media {
+      display: none;
+    }
+  }
+
+/*nav ul li a:hover {
+  color: #000000;
+  -webkit-transition: color .3s ease-in;
+  -moz-transition: color .3s ease-in;
+  -o-transition: color .3s ease-in;
+  transition: color .3s ease-in;  
+}
+
+/*----------------------------------------------------------------------------- 
+03=LAYOUT  
+-----------------------------------------------------------------------------*/
+
+p {
+  font-size: 1.6em;
+  font-family: 'Lato', sans-serif;
+  line-height: 2em;
+  color: #4E5860;
+}
+
+a {
+  color: #6D6D6D;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #359D71;
+}
+
+hr {
+  color: #DDDDDD;
+  margin: 0;
+}
+
+button {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 { 
+  /* h1 font size used for nav bar - should be tallest (height) element in nav*/
+  font-size: 3.8em;
+  float: left;
+  padding: 0;
+  margin: .1em 2em 0 0;
+  font-family: Calibri, Trebuchet, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 2.6em;
+  margin: 0;
+}
+
+h3 { 
+  font-size: 2.2em;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+h5 { 
+  font-size: 1.2em;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1.0em;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.6em;
+}
+
+ul li a {
+  margin: 2px;
+  padding: 2px;
+  display: block;
+}
+
+ul li a:hover {
+  color: #359D71;
+  -webkit-transition: color .3s ease-in;  /* Safari and Chrome */
+  -moz-transition: color .3s ease-in;     /* Firefox 4 */
+  -ms-transition: color 0.3s ease-in;     /* Internet Explorer */
+  -o-transition: color .3s ease-in;       /* Opera */
+  transition: color .3s ease-in;  
+}
+
+#nav-title a:hover {
+  color: #000000;
+  -webkit-transition: color .3s ease-in;  /* Safari and Chrome */
+  -moz-transition: color .3s ease-in;     /* Firefox 4 */
+  -ms-transition: color 0.3s ease-in;     /* Internet Explorer */
+  -o-transition: color .3s ease-in;       /* Opera */
+  transition: color .3s ease-in;  
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.clear {
+  clear: both;
+}
+
+.left-align {
+  float:left;
+}
+
+.right-align {
+  float: right;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 8px 8px -8px gray;
+     -moz-box-shadow: 0 8px 8px -8px gray;
+          box-shadow: 0 8px 8px -8px gray;
+}
+
+/*----------------------------------------------------------------------------- 
+04=SLIDER
+-----------------------------------------------------------------------------*/
+
+#slideshow { 
+    position: relative;
+    width: 100%; 
+    margin: 2em 0;
+    box-shadow: 0 0 2em rgba(0,0,0,0.4); 
+}
+
+#slideshow:before {
+  content: "";
+  display: block;
+  padding-top: 100%;  /* initial ratio */  
+}
+
+#slideshow div { 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.slide {
+
+}
+
+.right-col table {
+  width: 100%;
+}
+
+
+.colored {
+  color: #359D71;
+  /*color: #BADA55;*/
+}
+
+/*----------------------------------------------------------------------------- 
+05=CONTACT-FORM
+-----------------------------------------------------------------------------*/
+
+#contact-form {
+  padding: 2em;
+  font: 100% Arial, Helvetica, sans-serif;
+}
+
+#contact-form .inputs {
+  width: 100%;
+}
+
+#contact-form .inputs input {
+  float: left;
+  font-size: 1.6em;
+  width: 24%;
+  min-width: 8em;
+  margin-right: 1%;
+  margin-bottom: 1em;
+  padding: .3em 2%;
+}
+
+#contact-form textarea {
+  resize: none;
+  border-color: #DDDDDD;
+  font-size: 1.6em;
+  width: 99%;
+  margin-right: 1%;
+  padding: .3em 2%;
+}
+
+/*----------------------------------------------------------------------------- 
+06=BLOG-POSTS
+-----------------------------------------------------------------------------*/
+
+.post {
+  margin-bottom: 50px;
+}
+
+.post h3 {
+  margin: .5em 0;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post h4 {
+  margin: .5em 0;
+  font-style: italic;
+}
+
+.post h5 {
+  margin: .5em 0;
+  font-style: italic;
+}
+
+.post-meta {
+color: #999;
+padding: 1em 0px;
+font-style: italic;
+}
+
+.ellipsis {
+  text-align: center;
+}
+
+hr.style-one {
+  /* This is the <hr> used below page headers */
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
+
+.share {
+  height: 4em;
+}
+
+.share ul {
+  width: 100%;
+}
+
+.share ul li {
+  float: left;
+  list-style: none;
+  width: 25%;
+}
+
+/*----------------------------------------------------------------------------- 
+07=SOCIAL MEDIA
+-----------------------------------------------------------------------------*/
+
+.twitter-button-desktop {
+  text-align: center;
+  margin: 1em;
+}
+
+.twitter-button-tablet {
+  text-align: center;
+  margin: 1em;
+}
+
+.twitter-button-mobile {
+  text-align: center;
+  margin: 1em;
+}
+
+/*----------------------------------------------------------------------------- 
+08=RESPONSIVE ADJUSTMENTS
+-----------------------------------------------------------------------------*/
+
+/* Mobile ----------- */
+@media only screen and (max-width : 480px) {
+  
+  .twitter-button-tablet, .twitter-button-desktop {
+    display: none;
+  }
+
+  #main {
+    padding: 2rem 4rem;
+  }
+
+  .right-col {
+    display: none;
+  }
+
+  .left-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .social-desk-tab {
+    display: none;
+  }
+}
+
+/* Tablet ----------- */
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  
+  .twitter-button-mobile, .twitter-button-desktop {
+    display: none;
+  }
+
+  #main {
+    padding: 2rem 8rem;
+  }
+
+  .social-mobile {
+    display: none;
+  }
+}
+
+/* Desktop ----------- */
+@media only screen and (min-width : 768px) {
+ 
+  .twitter-button-mobile, .twitter-button-tablet {
+    display: none;
+  }
+
+  #main {
+    padding: 2rem 16rem;
+  }
+
+  .social-mobile {
+    display: none;
+  }
+}
+
+/*----------------------------------------------------------------------------- 
+09=EMAIL SUBSCRIBE
+-----------------------------------------------------------------------------*/
+
+.email-subscribe {
+  padding: 2em 0;
+  font: 100% Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.email-subscribe input {
+  min-width: 8em;
+}
+
+/*----------------------------------------------------------------------------- 
+10=BUTTON
+-----------------------------------------------------------------------------*/
+
+.button {
+  border: none;
+  border-top: .1em solid #1bd484;
+  background: #237a56;
+  background: -webkit-gradient(linear, left top, left bottom, from(#40cf91), to(#237a56));
+  background: -webkit-linear-gradient(top, #40cf91, #237a56);
+  background: -moz-linear-gradient(top, #40cf91, #237a56);
+  background: -ms-linear-gradient(top, #40cf91, #237a56);
+  background: -o-linear-gradient(top, #40cf91, #237a56);
+  padding: .2em 1em;
+  margin: .1em;
+  border-radius: .3em;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 .1em 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 .1em 0;
+  box-shadow: rgba(0,0,0,1) 0 .1em 0;
+  text-shadow: rgba(0,0,0,.4) 0 .1em 0;
+  color: #000000;
+  font-size: 1.6em;
+  letter-spacing: .1em;
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  vertical-align: middle;
+  }
+.button:hover {
+   border-top-color: #359d72;
+   background: #359d72;
+   color: #000000;
+   }
+.button:active {
+   border-top-color: #359d72;
+   background: #359d72;
+   }
+
+/*----------------------------------------------------------------------------- 
+11=SOCIAL BUTTONS BOX (SIDEBAR)
+-----------------------------------------------------------------------------*/
+
+.socialize {
+  border: 1px solid #000000;
+  margin: 2em 0;
+}
+
+.socialize tr td {
+  padding: 1em .2em;
+  font-size: 1.4em;
+}
+
+.socialize a {
+  display: inline-block;
+}
+
+.spaced-caps {
+  font: 100% Arial, Helvetica, sans-serif;
+  /*font-size: 1.2em;*/
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+@media (max-width: 480px) {
+  .socialize a img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hide-social {
+    display: none;
+  }
+}
+
+/*----------------------------------------------------------------------------- 
+12=RESUME PAGE
+-----------------------------------------------------------------------------*/
+
+img.company-img {
+  max-width: 75%;
+  margin: 3em 0 0 0;
+}
+
+.sgii-text, .kuru-text, .alterniity-text, .hinckley-text, .uvf-text, .vilcap-text, .utah-text {
+  display: none;
+}
+
+/*----------------------------------------------------------------------------- 
+12=ABOUT PAGE
+-----------------------------------------------------------------------------*/
+
+table.center-table tr td {
+  text-align: center; 
+  vertical-align: middle;
+}
+
+.img-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1em 1.2em;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 18em;
+}
+
+.hide-pic {
+  display: none;
+}
+
+@media only screen and (max-width : 480px) {
+  .hide-pic {
+    display: block;
+  }
+
+  .about-pic, .about-summary {
+    width: 50%;
+    float: left;
+  }
+}
+
+
+

@@ -1,0 +1,17 @@
+      <h5 class="left-align">
+        Instagram @basilvetas
+      </h5>
+      <h5 class="right-align">
+        &copy; <span id="current-date"></span> Basil Vetas | All Rights Reserved
+      </h5>
+      <div class="clear"></div>
+
+      <script>
+        /*
+        * Updates footer date (year)
+        * Note: this script must come after the script that loads the footer
+        */
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        document.getElementById("current-date").innerHTML = year;
+      </script>

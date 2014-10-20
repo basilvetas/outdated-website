@@ -1,0 +1,45 @@
+    <nav class="fixed shadow">
+        <h1 id="nav-title"><a href="../home.html">Basil<span class="colored">Veta&sigmaf;</span></a></h1>
+        <ul id="nav">
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="contact.html" class="last-child">Contact</a></li>
+        </ul>
+        <ul id="social-media" class="right-align"> <!-- Social Media Buttons -->
+          <li><a href="https://www.linkedin.com/in/basilvetas/" target="_blank" class="social"><img src="../images/icons-black/linkedin.png" alt="LinkedIn" title="LinkedIn" onmouseover="this.src='../images/icons-color/linkedin.png';" onmouseout="this.src='../images/icons-black/linkedin.png';"></a></li>
+
+          <li><a href="https://plus.google.com/+BasilVetas" target="_blank" class="social"><img src="../images/icons-black/google.png" alt="Google Plus" title="Google+" onmouseover="this.src='../images/icons-color/google.png';" onmouseout="this.src='../images/icons-black/google.png';"></a></li>
+
+          <li><a href="https://twitter.com/basilvetas" target="_blank" class="social"><img src="../images/icons-black/twitter.png" alt="Twitter" title="Twitter" onmouseover="this.src='../images/icons-color/twitter.png';" onmouseout="this.src='../images/icons-black/twitter.png';"></a></li>
+
+          <li><a href="https://www.youtube.com/user/basilvetas" target="_blank" class="social"><img src="../images/icons-black/youtube.png" alt="YouTube" title="YouTube" onmouseover="this.src='../images/icons-color/youtube.png';" onmouseout="this.src='../images/icons-black/youtube.png';"></a></li>
+
+          <li><a href="https://www.facebook.com/basilvetas" target="_blank" class="social"><img src="../images/icons-black/facebook.png" alt="Facebook" title="Facebook" onmouseover="this.src='../images/icons-color/facebook.png';" onmouseout="this.src='../images/icons-black/facebook.png';"></a></li>
+
+          <li><a href="https://www.pinterest.com/basilvetas/" target="_blank" class="social"><img src="../images/icons-black/pinterest.png" alt="Pinterest" title="Pinterest" onmouseover="this.src='../images/icons-color/pinterest.png';" onmouseout="this.src='../images/icons-black/pinterest.png';"></a></li>
+        </ul> <!-- END Social Media Buttons -->
+        <div class="clear"></div>
+      </nav>
+
+      <script>
+        /*
+        * Make nav responsive
+        * Credit to: bit.ly/1p4PPXb 
+        */
+        $("#nav").addClass("hide");
+        $("#nav-title").before('<div id="menu"><a href="#">☰</a></div>');
+        
+        $("#menu").click(function()
+        {
+          $("#nav").toggle();
+        });
+
+        $(window).resize(function()
+        {
+          if(window.innerWidth > 768) {
+            $("#nav").removeAttr("style");
+        }
+        });
+      </script>
