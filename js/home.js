@@ -44,6 +44,9 @@ $(document).ready(function() {
       .appendTo('#slideshow');
   },  4000);
 
+  /*
+  * This code takes a user to the corresponding page of the archives menu when clicked
+  */
   document.getElementById("archives").onchange = function() 
   {
     if (this.selectedIndex!==0) 
